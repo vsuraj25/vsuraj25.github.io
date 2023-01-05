@@ -1,0 +1,182 @@
+<html> 
+<head> 
+  <title>Metro Interstate Traffic Prediction</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script> 
+  <script>  
+  $(function(){ 
+    $("#footer").load("footer.html") 
+  }); 
+  </script>  
+</head> 
+<body> 
+<!-- Nav -->
+<nav id="nav">
+  <ul class="container">
+      <li style="text-align : left; vertical-align: bottom; font-size: 30px; font-family: fantasy;color: aliceblue;">Suraj Verma</li>
+      <li><a href="#">View in Github</a></li>
+      <li><a href="#">Run Deployed App</a></li>
+      <li><a href="view_projects.html">All Projects</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#footer">Contact</a></li>
+      <li><a href="#">My Resume</a></li>
+  </ul>
+</nav>
+
+<!-- Content -->
+<div class="container pt-3">
+
+<p><a href="https://www.python.org/"><img src="http://ForTheBadge.com/images/badges/made-with-python.svg" alt="forthebadge made-with-python"></a></p>
+<div id="top"></div>
+
+<div align="center">
+  <a href="https://github.com/vsuraj25">
+    <img src="https://img.icons8.com/clouds/100/null/traffic-jam.png" alt="Logo" width="80" height="80"/> 
+  </a>
+
+    
+<h3 align="center">Metro Interstate Traffic Prediction</h3>
+
+ <p align="center">
+    Machine Learning Project (Internship)
+    <br />
+    <a href="https://github.com/vsuraj25"><strong>Explore my Repositories. »</strong></a>
+    <br />
+    <br />
+    <a href="#intro">Introduction</a>
+    ·
+    <a href="#data"> Data Information</a>
+    ·
+    <a href="#contact">Contact</a>
+  </p>
+</div>
+
+<!-- ABOUT THE PROJECT -->
+<h2 id="problem-statement"><strong>Problem Statement</strong></h2>
+<ul>
+<li>Nowadays, traffic is a major issue for everyone, and it is a source of stress for anyone
+who has to deal with it on a daily basis. The growth of the population delays traffic and
+makes it worse day by day. The settlement of modern civilization looks at it, but it is
+unable to act in such a way as to protect people. We can watch traffic, collect data, and
+anticipate the next and subsequent observations using a variety of approaches and
+patterns. The observation agency then makes observations, which are then required out
+and predictions are made. Being stuck in a cosmopolitan city&#39;s traffic is the most
+common occurrence in one&#39;s life.
+The goal of this project is to build a prediction model using multiple machine learning
+techniques and to use a template to document the end-to-end stages. We&#39;re trying to
+forecast the value of a continuous variable with the Metro Interstate Traffic Volume
+dataset, which is a regression issue.</li>
+</ul>
+<h2 id="deployed-app"><strong>Deployed app</strong></h2>
+<p><a href="https://web-production-35a4.up.railway.app/"><img src="https://user-images.githubusercontent.com/55409076/210774151-24799ff0-dbf3-4240-8334-6b96d8cd4673.PNG" alt="App Screenshot"></a></p>
+<p><a href="https://web-production-35a4.up.railway.app/">Deployed app link</a></p>
+<!-- GETTING STARTED -->
+<div id="intro"></div>
+
+<h2 id="introduction"><strong>Introduction</strong></h2>
+<ul>
+<li>This project aims to build a prediction model which will help us to find out the traffic volume based on different factors such as time, weather conditions and holidays. We have used ensemble learning algorithms to develop the prediction model. This entire project is build using DVC (Data Version Control) and MLFlow for retraining, experimenting and model monitoring purpose.</li>
+</ul>
+<div id="data"></div>
+<!-- USAGE EXAMPLES -->
+
+<h2 id="dataset-information"><strong>Dataset Information</strong></h2>
+<ul>
+<li><p>Download the original dataset here : 
+<a href="https://archive.ics.uci.edu/ml/datasets/Metro+Interstate+Traffic+Volume">Metro Interstate Traffic Volume Data</a></p>
+</li>
+<li><p>The dataset used in this project is a UCI machine learning dataset. </p>
+</li>
+<li><p>The data at every transformation is uploaded and extracted from mongoDB database. </p>
+</li>
+<li><p>The dataset contains hourly interstate 94 westbound traffic volume for MN DoT ATR
+station 301. </p>
+</li>
+<li><p>The region of data lies between regions of Minneapolis. </p>
+</li>
+<li><p>It includes features such as holiday, time, weather, etc. which impacts the traffic volume traffic volume directly.</p>
+</li>
+<li><p>Shape of Original Data - (48204, 9)</p>
+</li>
+<li><p><strong>Attribute Information</strong></p>
+</li>
+</ul>
+<ol>
+<li><code>holiday</code>: Indicates if the date is a holiday and if it specifies the holiday, if not None.</li>
+<li><code>temp</code>: Indicates the temperature in Kelvin.</li>
+<li><code>rain_1h</code>: Amount in mm of rain that occurred in the hour.</li>
+<li><code>snow_1h</code>: Amount in mm of snow that occurred in the hour.</li>
+<li><code>clouds_all</code>: Percentage of cloud cover.</li>
+<li><code>weather_main</code>: Short textual description of the current weather.</li>
+<li><code>weather_description</code>: Longer textual description of the current weather.</li>
+<li><code>date_time</code>: Hour of the data collected in local CST time.</li>
+<li><code>traffic_volume</code>: Hourly I-94 ATR 301 reported westbound traffic volume.</li>
+</ol>
+<p align="right">(<a href="#top">back to top</a>)</p> 
+
+<!-- USAGE EXAMPLES -->
+<h2 id="project-architecture"><strong>Project Architecture</strong></h2>
+<p><a href="https://github.com/vsuraj25"><img src="https://user-images.githubusercontent.com/55409076/210779327-7d46df01-760d-4162-97cc-b3fe405985a9.png" alt="Project Architecture"></a></p>
+<h2 id="latency-for-model-response"><strong>Latency for model response</strong></h2>
+<ul>
+<li>01.60 Seconds</li>
+</ul>
+<h2 id="project-demo-youtube-video"><strong>Project Demo Youtube Video</strong></h2>
+<p><a href="https://www.youtube.com/watch?v=-gdZvsES43Q"><img src="https://user-images.githubusercontent.com/55409076/210784070-12f54e09-e5c0-417f-b7cd-1941a1247865.png" alt="Project Youtube Video"></a></p>
+<h2 id="linkedin-post"><strong>Linkedin Post</strong></h2>
+<p><a href="https://www.linkedin.com/posts/suraj-verma-982b31157_machinelearning-internship-datascience-activity-7016772812791001088-QBcp/?utm_source=share&amp;utm_medium=member_desktop"><img src="https://img.shields.io/badge/Metro_Interstate_Traffic_Predction_Project-eeeeee?style=for-the-badge&logo=linkedin&logoColor=ffffff&labelColor=0A66C2" alt="Metro Interstate Traffic Predction Project"></a></p>
+<h2 id="about-this-internship-project"><strong>About this Internship Project</strong></h2>
+<ul>
+<li>Project Title : Metro Interstate Prediction</li>
+<li>Technologies : Machine Learning</li>
+<li>Domain : Transport</li>
+<li>Project Difficulties level : Intermediate</li>
+</ul>
+<h2 id="requirements"><strong>Requirements</strong></h2>
+<ul>
+<li>Python 3.7</li>
+<li>Numpy</li>
+<li>Pandas</li>
+<li>Flask</li>
+<li>Pytest</li>
+<li>Tox</li>
+<li>DVC</li>
+<li>MLFlow</li>
+<li>MongoDB</li>
+<li>Checkout requirements.txt for more information.</li>
+</ul>
+<h2 id="technologies-used"><strong>Technologies used</strong></h2>
+<p><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
+<img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn">
+<img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
+<img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
+<img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
+<img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white" alt="HTML">
+<img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white" alt="CSS">
+<img src="https://img.shields.io/badge/DVC-945DD6?style=for-the-badge&logo=dataversioncontrol&logoColor=white" alt="DVC">
+<img src="https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=for-the-badge&logo=numpy&logoColor=blue" alt="MLFlow">
+<img src="https://img.shields.io/badge/gunicorn-%298729.svg?style=for-the-badge&logo=gunicorn&logoColor=white" alt="Gunicorn"></p>
+<h2 id="tools-used"><strong>Tools used</strong></h2>
+<p><img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" alt="Visual Studio Code">
+<img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+<img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+<img src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white" alt="Heroku">
+<img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
+<img src="https://img.shields.io/badge/Railway-131415?style=for-the-badge&logo=railway&logoColor=white" alt="Railway">
+<img src="https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white" alt="Render">
+<img src="https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=for-the-badge&logo=numpy&logoColor=blue" alt="MLFlow"></p>
+<!-- CONTACT -->
+<div id="contact"></div>
+
+<h2 id="contact"><strong>Contact</strong></h2>
+<p><a href="https://www.linkedin.com/in/suraj-verma-982b31157/"><img src="https://img.shields.io/badge/Suraj_Verma-eeeeee?style=for-the-badge&logo=linkedin&logoColor=ffffff&labelColor=0A66C2" alt="Suraj Verma | LinkedIn"></a>
+<a href="mailto:sv255255@gmail.com?subject=Github"><img src="https://img.shields.io/badge/sv255255-eeeeee?style=for-the-badge&logo=gmail&logoColor=ffffff&labelColor=EA4335" alt="Suraj Verma | G Mail"></a>
+<a href="mailto:sv255255@gmail.com?subject=Github"><img src="https://img.shields.io/badge/My_Portfolio-eeeeee?style=for-the-badge" alt="Suraj Verma | G Mail"></a></p>
+<p align="right">(<a href="#top">back to top</a>)</p>
+</div>
+
+<!-- Footer Section -->
+<div id="footer"></div> 
+</body> 
