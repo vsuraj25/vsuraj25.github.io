@@ -1,0 +1,162 @@
+<html> 
+<head> 
+  <title>Project Name</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script> 
+  <script>  
+  $(function(){ 
+    $("#footer").load("footer.html") 
+  }); 
+  </script>  
+</head> 
+<body> 
+<!-- Nav -->
+<nav id="nav">
+  <ul class="container">
+      <li style="text-align : left; vertical-align: bottom; font-size: 30px; font-family: fantasy;color: aliceblue;">Suraj Verma</li>
+      <li><a href="https://github.com/vsuraj25/California-House-Price-Prediction-End-to-End">View in Github</a></li>
+      <li><a href="https://web-production-6e4e.up.railway.app/">Run Deployed App</a></li>
+      <li><a href="view_projects.html">All Projects</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#footer">Contact</a></li>
+      <li><a href="#">My Resume</a></li>
+  </ul>
+</nav>
+
+<!-- Content -->
+<div class="container">
+    <p><a href="https://www.python.org/"><img src="http://ForTheBadge.com/images/badges/made-with-python.svg" alt="forthebadge made-with-python"></a></p>
+<div id="top"></div>
+
+<div align="center">
+  <a href="https://github.com/aravind9722">
+    <img src="https://img.icons8.com/external-ddara-lineal-ddara/512/external-housing-real-estate-ddara-lineal-ddara.png" alt="Logo" width="80" height="80"/> 
+  </a>
+
+    
+<h3 align="center">California House Price Prediction</h3>
+
+ <p align="center">
+    Machine Learning Project
+    <br />
+    <a href="https://github.com/vsuraj25"><strong>Explore my Repositories. »</strong></a>
+    <br />
+    <br />
+    <a href="#intro">Introduction</a>
+    ·
+    <a href="#data"> Data Information</a>
+    ·
+    <a href="#contact">Contact</a>
+  </p>
+</div>
+
+<!-- ABOUT THE PROJECT -->
+<h2 id="about-the-project"><strong>About The Project</strong></h2>
+<ul>
+<li>This is an End-to-End Project which aims to predict the housing price using the California Housing Price Dataset. This Project is developed with an prespective of real industrial projects. It is developed with a complete CI/CD pipeline with github actions.</li>
+</ul>
+<h2 id="deployed-app"><strong>Deployed app</strong></h2>
+<p><a href="https://web-production-6e4e.up.railway.app/"><img src="https://user-images.githubusercontent.com/55409076/204779198-56c97f74-05db-43fb-a9b8-db1af46184e9.PNG" alt="App Screenshot"></a></p>
+<p><a href="https://web-production-6e4e.up.railway.app/">LINK TO HEROKU APP</a></p>
+<!-- GETTING STARTED -->
+<div id="intro"></div>
+
+<h2 id="introduction"><strong>Introduction</strong></h2>
+<ul>
+<li>. Entire pipeline is deployed in Heroku. Logs, artifacts, datasets, models and experiments are maintained in the deployed application interface.</li>
+</ul>
+<div id="data"></div>
+<!-- USAGE EXAMPLES -->
+
+<h2 id="dataset-information"><strong>Dataset Information</strong></h2>
+<ul>
+<li><p>Download the original dataset here : 
+<a href="https://cal-house-price-prediction.herokuapp.com/">California housing dataset</a></p>
+</li>
+<li><p>The US Census Bureau has published California Census Data which has 10 types of metrics such as the population, median income, median housing price, and so on for each block group in California. The dataset also serves as an input for project scoping and tries to specify the functional and nonfunctional requirements for it.</p>
+</li>
+<li><p><strong>Dataset Description</strong></p>
+</li>
+</ul>
+<ol>
+<li><p>longitude: A measure of how far west a house is; a higher value is farther west</p>
+</li>
+<li><p>latitude: A measure of how far north a house is; a higher value is farther north</p>
+</li>
+<li><p>housingMedianAge: Median age of a house within a block; a lower number is a newer building</p>
+</li>
+<li><p>totalRooms: Total number of rooms within a block</p>
+</li>
+<li><p>totalBedrooms: Total number of bedrooms within a block</p>
+</li>
+<li><p>population: Total number of people residing within a block</p>
+</li>
+<li><p>households: Total number of households, a group of people residing within a home unit, for a block</p>
+</li>
+<li><p>medianIncome: Median income for households within a block of houses (measured in tens of thousands of US Dollars)</p>
+</li>
+<li><p>medianHouseValue: Median house value for households within a block (measured in US Dollars)</p>
+</li>
+<li><p>oceanProximity: Location of the house w.r.t ocean/sea</p>
+</li>
+</ol>
+<p align="right">(<a href="#top">back to top</a>)</p> 
+
+<h2 id="deployed-model-information"><strong>Deployed Model Information</strong></h2>
+<ul>
+<li><p><strong>View Logs</strong> - All model training log file can be downloaded here. </p>
+</li>
+<li><p><strong>View Artifacts</strong> - All model artifacts file can be downloaded here. </p>
+</li>
+<li><p><strong>View Trained Models</strong> - All model file can be downloaded here. </p>
+</li>
+<li><p><strong>Estimate California price</strong> - For single record prediction. Form will be displayed. Submit the form to get estimated price for california house. </p>
+</li>
+<li><p><strong>Train housing estimator model</strong> - Initiate Model training here. Output Files such as log, artifact and models can be viewed and downloaded using appropriate timestamps. </p>
+</li>
+<li><p><strong>Update Model Config</strong> - Any parameters modification in search of improved model can be configured here. Enter modificated parameters in the Model Config Json Field and check weather your json format is valid or not. If valid update the model config by giving the validated json config.
+Model training will be performed with the updated configuration.</p>
+</li>
+<li><p><strong>Experiment History</strong> - Every time model training is initailized it is counted as an experiment. Results of five latest initialized and completed experiments will be dislpayed here.</p>
+</li>
+</ul>
+<h2 id="requirements"><strong>Requirements</strong></h2>
+<ul>
+<li>Python 3.7</li>
+<li>Numpy</li>
+<li>Pandas</li>
+<li>Flask</li>
+<li>Checkout requirements.txt for more information.</li>
+</ul>
+<h3 id="technologies-used"><strong>Technologies used</strong></h3>
+<p><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
+<img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn">
+<img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
+<img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
+<img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
+<img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white" alt="HTML">
+<img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white" alt="CSS"></p>
+<h3 id="tools-used"><strong>Tools used</strong></h3>
+<p><img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" alt="Visual Studio Code">
+<img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+<img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+<img src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white" alt="Heroku"></p>
+<!-- CONTACT -->
+<div id="contact"></div>
+
+<h2 id="contact"><strong>Contact</strong></h2>
+<p><a href="https://www.linkedin.com/in/suraj-verma-982b31157/"><img src="https://img.shields.io/badge/Suraj_Verma-eeeeee?style=for-the-badge&logo=linkedin&logoColor=ffffff&labelColor=0A66C2" alt="Suraj Verma | LinkedIn"></a>
+<a href="mailto:sv255255@gmail.com?subject=Github"><img src="https://img.shields.io/badge/sv255255-eeeeee?style=for-the-badge&logo=gmail&logoColor=ffffff&labelColor=EA4335" alt="Suraj Verma | G Mail"></a>
+<a href="mailto:sv255255@gmail.com?subject=Github"><img src="https://img.shields.io/badge/My_Portfolio-eeeeee?style=for-the-badge" alt="Suraj Verma | G Mail"></a></p>
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+
+</div>
+
+<!-- Footer Section -->
+<div id="footer"></div> 
+</body> 
