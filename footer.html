@@ -13,7 +13,7 @@
         </header>
         <div class="row">
             <div class="col-12">
-                <form method="post" action="#">
+                <form method="post" action="#" onsubmit="sendEmail(event)">
                     <div class="row">
                         <div class="col-6 col-12-small">
                             <input type="text" name="name" id="name" placeholder="Name" />
@@ -36,6 +36,58 @@
                     </div>
                 </form>
             </div>
+            
+            <script>
+                function sendEmail(event) {
+                    event.preventDefault();
+            
+                    var name = document.getElementById("name").value;
+                    var email = document.getElementById("email").value;
+                    var subject = document.getElementById("subject").value;
+                    var message = document.getElementById("message").value;
+            
+                    var data = {
+                        Messages: [
+                            {
+                                From: {
+                                    Email: email,
+                                    Name: name,
+                                },
+                                To: [
+                                    {
+                                        Email: "sv255255@gmail.com",
+                                    },
+                                ],
+                                Subject: subject,
+                                TextPart: message,
+                            },
+                        ],
+                    };
+            
+                    fetch("https://api.mailjet.com/v3.1/send", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            Authorization: "Basic b9c64bfe653cac107666456fb3cb4769",
+                        },
+                        body: JSON.stringify(data),
+                    })
+                        .then(function (response) {
+                            if (response.ok) {
+                                alert("Message sent successfully!");
+                            } else {
+                                alert("An error occurred while sending the message.");
+                            }
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                            alert("An error occurred while sending the message.");
+                        });
+                }
+            </script>
+            
+            
+            
             <div class="col-12">
                 <hr />
                 <h3>Find me on ...</h3>
