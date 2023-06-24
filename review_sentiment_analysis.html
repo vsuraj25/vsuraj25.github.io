@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <title>Malaria Detection Using CNN</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function () {
+            $("#footer").load("footer.html")
+        }); 
+    </script>
+</head>
+
+<body>
+    <!-- Nav -->
+    <nav id="nav">
+        <ul class="container">
+            <li
+                style="text-align : left; vertical-align: bottom; font-size: 30px; font-family: fantasy;color: aliceblue;">
+                Suraj Verma</li>
+            <li><a href="hhttps://github.com/vsuraj25/Customer_Review_Sentiment_Analysis_Using_Transformers">View in
+                    Github</a></li>
+            <li><a href="view_projects.html">All Projects</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#footer">Contact</a></li>
+            <li><a href="https://drive.google.com/file/d/1QfteqN5j0tZ79lIB4lQg1uaOdoO_HAlV/view?usp=sharing">My
+                    Resume</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Content-->
+    <div class="container pt-3">
+        <h1 id="sentiment-analysis-on-amazon-fine-food-reviews">Sentiment Analysis on Amazon Fine Food Reviews</h1>
+        <p>This project focuses on performing sentiment analysis on the Amazon Fine Food Reviews dataset using two
+            different approaches: VADER (Valence Aware Dictionary and Sentiment Reasoner) with a Bag of Words
+            approach
+            and the Roberta Pretrained Model from Transformers.</p>
+        <h2 id="dataset">Dataset</h2>
+        <p>The dataset used for this project is the <a
+                href="https://www.kaggle.com/snap/amazon-fine-food-reviews">Amazon Fine Food Reviews dataset</a>. It
+            contains reviews of fine foods from Amazon, including a variety of information such as the product ID,
+            reviewer ID, helpfulness rating, review text, and more. The dataset provides a rich source of data for
+            sentiment analysis tasks.</p>
+        <h2 id="approaches">Approaches</h2>
+        <h3 id="vader-valence-aware-dictionary-and-sentiment-reasoner---bag-of-words-approach">VADER (Valence Aware
+            Dictionary and Sentiment Reasoner) - Bag of Words approach</h3>
+        <p>VADER is a lexicon-based approach for sentiment analysis that is specifically tuned for social media
+            texts.
+            It uses a combination of lexical and grammatical heuristics to determine the sentiment of a given text.
+            In
+            this project, we employed the Bag of Words approach, which represents text data as a bag of individual
+            words, disregarding grammar and word order. The VADER sentiment analyzer assigns sentiment scores to
+            each
+            review, indicating the positivity, neutrality, or negativity of the text.</p>
+        <h3 id="roberta-pretrained-model-from-transformers">Roberta Pretrained Model from Transformers</h3>
+        <p>RoBERTa is a robustly optimized method for pretraining natural language processing (NLP) models. It
+            builds
+            upon the popular BERT architecture and achieves state-of-the-art performance on various NLP tasks. In
+            this
+            project, we utilized the Roberta pretrained model from the Transformers library. The model was
+            fine-tuned on
+            the Amazon Fine Food Reviews dataset for sentiment analysis. By feeding review texts into the model, we
+            obtained sentiment predictions for each review.</p>
+        <h2 id="results">Results</h2>
+        <p>The sentiment analysis results from both approaches were compared and evaluated based on accuracy,
+            precision,
+            recall, and F1-score. The performance of each approach was analyzed to understand their strengths and
+            limitations in sentiment analysis tasks.</p>
+        <h2 id="usage">Usage</h2>
+        <p>To reproduce the sentiment analysis results, follow these steps:</p>
+        <ol>
+            <li>Download the Amazon Fine Food Reviews dataset from <a
+                    href="https://www.kaggle.com/snap/amazon-fine-food-reviews">Kaggle</a>.</li>
+            <li>Preprocess the dataset by cleaning and preparing the review texts.</li>
+            <li>Implement the VADER approach using a Bag of Words representation and calculate sentiment scores for
+                each
+                review.</li>
+            <li>Fine-tune the Roberta Pretrained Model using the Transformers library on the dataset.</li>
+            <li>Feed the review texts to the fine-tuned Roberta model and obtain sentiment predictions.</li>
+            <li>Evaluate the performance of both approaches by comparing the sentiment analysis results.</li>
+        </ol>
+        <h2 id="dependencies">Dependencies</h2>
+        <p>Make sure you have the following dependencies installed:</p>
+        <ul>
+            <li>Python 3.x</li>
+            <li>NLTK (Natural Language Toolkit)</li>
+            <li>Transformers library</li>
+        </ul>
+
+        <h2 style="text-align: center; vertical-align: bottom; margin: 5px;">Implementation</h2>
+
+        <div class="gist-container">
+            <script src="https://gist.github.com/vsuraj25/91cf5d632e337c8fa390c54ce39bce3d.js"></script>
+        </div>
+    </div>
+
+
+    <!-- Footer Section -->
+    <div id="footer"></div>
+</body>
