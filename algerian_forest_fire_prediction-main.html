@@ -1,202 +1,388 @@
-<html> 
-<head> 
-  <title>Algerian Forest Fire Prediction Project</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script> 
-  <script>  
-  $(function(){ 
-    $("#footer").load("footer.html") 
-  }); 
-  </script>  
-</head> 
-<body> 
-<!-- Nav -->
-<nav id="nav">
-  <ul class="container">
-      <li style="text-align : left; vertical-align: bottom; font-size: 30px; font-family: fantasy;color: aliceblue;">Suraj Verma</li>
-      <li><a href="https://github.com/vsuraj25/Forest-Fire-Prediction">View in Github</a></li>
-      <li><a href="https://web-production-ae1b.up.railway.app/">Run Deployed App</a></li>
-      <li><a href="view_projects.html">All Projects</a></li>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#footer">Contact</a></li>
-      <li><a href="https://drive.google.com/file/d/1QfteqN5j0tZ79lIB4lQg1uaOdoO_HAlV/view?usp=sharing">My Resume</a></li>
-  </ul>
-</nav>
-<!--content-->  
-<div class="container">
-  <p><a href="https://www.python.org/"><img src="http://ForTheBadge.com/images/badges/made-with-python.svg" alt="forthebadge made-with-python"></a></p>
-<div id="top"></div>
+<!DOCTYPE html>
+<html lang="en">
 
-<div align="center">
-  <a href="https://github.com/vsuraj25">
-    <img src="https://img.icons8.com/external-dreamcreateicons-flat-dreamcreateicons/64/null/external-fire-weather-dreamcreateicons-flat-dreamcreateicons.png" alt="Logo" width="80" height="80"/> 
-  </a>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    
-<h3 align="center">Forest Fire Prediction</h3>
+    <title>Forest Fire Prediction</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
- <p align="center">
-    Machine Learning Project
-    <br />
-    <a href="https://github.com/vsuraj25"><strong>Explore my Repositories. »</strong></a>
-    <br />
-    <br />
-    <a href="#intro">Introduction</a>
-    ·
-    <a href="#data"> Data Information</a>
-    ·
-    <a href="#contact">Contact</a>
-  </p>
-</div>
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-<!-- ABOUT THE PROJECT -->
-<h2 id="about-the-project"><strong>About The Project</strong></h2>
-<ul>
-<li>This project aims to predict forest fire using best machine learning models. Regression and Classification both streams Supervised learning is portrayed in this project. The dataset used in this project is taken from UCI Machine Learning Repository - Algerian Forest Fire Dataset. Both Single input and Bulk input prediction can be exceuted.</li>
-</ul>
-<h2 id="deployed-app"><strong>Deployed app</strong></h2>
-<p><a href="https://web-production-ae1b.up.railway.app/"><img src="https://user-images.githubusercontent.com/55409076/205337765-74845c49-de33-4f9d-943c-c7d80c35ccf6.PNG" alt="App Screenshot"></a></p>
-<p><a href="https://web-production-ae1b.up.railway.app/">LINK TO HEROKU APP</a></p>
-<!-- GETTING STARTED -->
-<div id="intro"></div>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
-<h2 id="introduction"><strong>Introduction</strong></h2>
-<ul>
-<li>In this project, i have worked on solving Regression and Classification both with a usecase of predicting the Forest Fire Weather index and Forest Fire possibility.The dataset used in this project is taken from UCI Machine Learning Repository - Algerian Forest Fire Dataset. MongoDB database is used to store the dataset. EDA and Model Building both could be found in the repo. Logging is maintained accordingly.</li>
-</ul>
-<div id="data"></div>
-<!-- USAGE EXAMPLES -->
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-<h2 id="dataset-information"><strong>Dataset Information</strong></h2>
-<ul>
-<li><p>Download the original dataset here : 
-<a href="https://archive.ics.uci.edu/ml/machine-learning-databases/00547/Algerian_forest_fires_dataset_UPDATE.csv">Algerian Forest Fire Dataset</a></p>
-</li>
-<li><p>The dataset includes 244 instances that regroup a data of two regions of Algeria,namely the Bejaia region located in the northeast of Algeria and the Sidi Bel-abbes region located in the northwest of Algeria.</p>
-</li>
-<li><p>The period of data is from June 2012 to September 2012.</p>
-</li>
-<li><p>The dataset includes 11 attribues and 1 output attribue (class)</p>
-</li>
-<li><p>The 244 instances have been classified into &#39;fire&#39; (138 classes) and &#39;not fire&#39; (106 classes) classes.</p>
-</li>
-<li><p><strong>Attribute Information</strong></p>
-</li>
-</ul>
-<ol>
-<li><code>Date</code> : (DD/MM/YYYY) Day, month (&#39;june&#39; to &#39;september&#39;), year (2012) Weather data observations</li>
-<li><code>Temp</code> : temperature noon (temperature max) in Celsius degrees: 22 to 42</li>
-<li><code>RH</code> : Relative Humidity in %: 21 to 90</li>
-<li><code>Ws</code> :Wind speed in km/h: 6 to 29</li>
-<li><code>Rain</code>: total day in mm: 0 to 16.8 FWI Components</li>
-<li><code>Fine</code>: Fuel Moisture Code (FFMC) index from the FWI system: 28.6 to 92.5</li>
-<li><code>Duff Moisture Code (DMC)</code>: index from the FWI system: 1.1 to 65.9</li>
-<li><code>Drought Code (DC)</code>: index from the FWI system: 7 to 220.4</li>
-<li><code>Initial Spread Index (ISI)</code>: index from the FWI system: 0 to 18.5</li>
-<li><code>Buildup Index (BUI)</code>: index from the FWI system: 1.1 to 68</li>
-<li><code>Fire Weather Index (FWI)</code>:  Index: 0 to 31.1</li>
-<li><code>Classes</code>: two classes, namely &#39;fire&#39; and â€œnot &#39;not fire&#39;</li>
-</ol>
-<p align="right">(<a href="#top">back to top</a>)</p> 
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
 
-<!-- USAGE EXAMPLES -->
-<h2 id="steps">Steps</h2>
-<ul>
-<li>Installing Python, PyCharm, Monogodb, Git to Computer.</li>
-<li>Creating Flask app by importing <code>Flask</code> module.</li>
-<li>Download the source dataset from <a href="https://archive.ics.uci.edu/ml/datasets/Algerian+Forest+Fires+Dataset++#">UCI Repository</a>.</li>
-<li>For Classification algorithm decided to predict the features <code>Classes</code> from the dataset which is Binary classification <code>(fire, not fire)</code>.</li>
-<li>For Regression Problem algorithm decided to predict the feature <code>FWI</code> (Fire weather Index) which is 90%+ correlated to Classes Feature.</li>
-</ul>
-<h3 id="loading-csv-and-inserting-to-db">Loading CSV and Inserting to DB</h3>
-<ul>
-<li>The Downloaded CSV file is loaded as pandas Dataframe using Pandas Library.</li>
-<li>Pandas Dataframe is converted to Dict .</li>
-<li>Mongodb Altas is used as DB here, with <code>pymongo library</code> mongodb is connected to python.</li>
-<li>Database and collections created via python and the list of dictionaries is uploaded using <code>collection.insert_many</code> method.</li>
-</ul>
-<p align="right">(<a href="#top">back to top</a>)</p> 
+    <!-- =======================================================
+  * Template Name: iPortfolio
+  * Updated: May 30 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
 
-<h3 id="eda">EDA</h3>
-<ul>
-<li>In this step, we will apply Exploratory Data Analysis (EDA) to extract insights from the data set to know which features have contributed more in predicting Forest fire by performing Data Analysis using Pandas and Data visualization using Matplotlib &amp; Seaborn. </li>
-<li>It is always a good practice to understand the data first and try to gather as many insights from it.</li>
-</ul>
-<h3 id="model-building">Model Building</h3>
-<ul>
-<li>For Regression Problem algorithm decided to predict the feature <code>FWI</code> (Fire weather Index) which is 90%+ correlated to Classes Feature.</li>
-<li>Models used : <strong>Linear regression, Lasso Regression, Ridge Regression, Random forest, Decision tree, K-Nearest Neighbour regressor, Support Vector Regressor.</strong></li>
-<li>For Classification algorithm decided to predict the features <code>Classes</code> from the dataset which is Binary classification <code>(fire, not fire)</code>.</li>
-<li>Models used : <strong>Logistic Regression, Decision Tree, Random Forest, XGboost, K-Nearest Neighbour.</strong></li>
-</ul>
-<h3 id="model-selection">Model Selection</h3>
-<ul>
-<li>HyperParameter Tuning Randomized Gridsearch CV is done for top 2 models for both Regression and Classification.</li>
-<li>For Classification <code>Stratified Kfold Cross-Validation metrics</code> is used based best Mean CV Accuracy Model is used for Model Deployment.</li>
-<li>For Regression <code>R2 score metrics</code> is used to select best model The R2 score is one of the performance evaluation measures for regression-based machine learning models.</li>
-</ul>
-<h3 id="flask">Flask</h3>
-<ul>
-<li>Importing the Flask module and creating a Flask web server from the Flask module.</li>
-<li>Create an object <strong>app</strong> in flask class with <code>__name__</code> which represents current app.py file.</li>
-<li>Create <code>/</code> route to render default page html.</li>
-<li><code>/predict_api</code> route for api testing using <code>Postman</code></li>
-<li>Create a route <code>/predict</code> <code>/predictR</code> to get user input for Classification and Regression respectively. </li>
-<li>Run the flask app with <code>app.run()</code> code.</li>
-</ul>
-<h3 id="heroku-deployment">Heroku Deployment</h3>
-<ul>
-<li>Create new repo in Github and push all the data using <code>Git</code>.</li>
-<li>Install Heroku CLI and login using <code>heroku login</code> and setup the app in Heroku Web.</li>
-<li>Connect with app <code>heroku git:remote -a appname</code></li>
-<li>Push to Heroku using <code>git push heroku main</code></li>
-</ul>
-<h2 id="requirements"><strong>Requirements</strong></h2>
-<ul>
-<li>Python 3.7</li>
-<li>Numpy</li>
-<li>Pandas</li>
-<li>Flask</li>
-<li>Checkout requirements.txt for more information.</li>
-</ul>
-<h3 id="technologies-used"><strong>Technologies used</strong></h3>
-<p><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
-<img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn">
-<img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
-<img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
-<img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
-<img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white" alt="HTML">
-<img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white" alt="CSS"></p>
-<h3 id="tools-used"><strong>Tools used</strong></h3>
-<p><img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" alt="Visual Studio Code">
-<img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git">
-<img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-<img src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white" alt="Heroku">
-<img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"></p>
-<!-- CONTACT -->
-<div id="contact"></div>
+<body>
 
-<h2 id="contact"><strong>Contact</strong></h2>
-<p><a href="https://www.linkedin.com/in/suraj-verma-982b31157/"><img src="https://img.shields.io/badge/Suraj_Verma-eeeeee?style=for-the-badge&logo=linkedin&logoColor=ffffff&labelColor=0A66C2" alt="Suraj Verma | LinkedIn"></a>
-<a href="mailto:sv255255@gmail.com?subject=Github"><img src="https://img.shields.io/badge/sv255255-eeeeee?style=for-the-badge&logo=gmail&logoColor=ffffff&labelColor=EA4335" alt="Suraj Verma | G Mail"></a>
-<a href="mailto:sv255255@gmail.com?subject=Github"><img src="https://img.shields.io/badge/My_Portfolio-eeeeee?style=for-the-badge" alt="Suraj Verma | G Mail"></a></p>
-<p align="right">(<a href="#top">back to top</a>)</p>
+    <!-- ======= Mobile nav toggle button ======= -->
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <div class="d-flex flex-column">
+
+            <div class="profile">
+                <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+                <h1 class="text-light"><a href="index.html">Suraj Verma</a></h1>
+                <div class="social-links mt-3 text-center">
+                    <a href="https://github.com/vsuraj25" class="github"><i class="bx bxl-github"></i></a>
+                    <a href="mailto:sv255255@gmail.com?subject=Project Viewed" class="google-plus"><i class="bx bxl-google"></i></a>
+                    <a href="https://www.linkedin.com/in/suraj-verma-982b31157/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                </div>
+            </div>
+
+            <nav id="navbar" class="nav-menu navbar">
+                <ul>
+                    <li><a href="index.html" class="nav-link scrollto active"><i class="bx bx-home"></i>
+                            <span>Back to Home</span></a></li>
+
+                    <li><a href="https://github.com/vsuraj25/Forest-Fire-Prediction" class="nav-link scrollto"><i class="bx bxl-github"></i> <span>View in Github</span></a> </li>
+
+                    <li><a href="https://forest-fire-prediction.onrender.com" class="nav-link scrollto"><i class="bx bx-cloud"></i>
+                            <span>View Deployed App</span></a></li>
+                    
+                </ul>
+            </nav><!-- .nav-menu -->
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Forest Fire Prediction</h2>
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li>Forest Fire Prediction</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section><!-- End Breadcrumbs -->
+
+        <!-- ======= Portfolio Details Section ======= -->
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container">
+                
+                <div class="row gy-4">
+
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper">
+                            <div class="swiper-wrapper align-items-center">
+
+                                <div class="swiper-slide">
+                                    <img src="assets/img/portfolio/forest-fire_bg_2_11zon.jpg" alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info">
+                            <h3>Project information</h3>
+                            <ul>
+                                <li><strong>Name</strong>: Forest Fire Prediction</li>
+                                <li><strong>Type</strong>: Personal</li>
+                                <li><strong>Project date</strong>: 22 Dec,2022</li>
+                                <li><strong>Project URL</strong>: <a
+                                        href="https://forest-fire-prediction.onrender.com">Deployed App Link</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container">
+                <div class="portfolio-description">
+                    <!-- Content-->
+
+                    <div align="center">
+                        <a href="https://github.com/vsuraj25">
+                            <img src="https://img.icons8.com/external-dreamcreateicons-flat-dreamcreateicons/64/null/external-fire-weather-dreamcreateicons-flat-dreamcreateicons.png"
+                                alt="Logo" width="80" height="80" />
+                        </a>
 
 
+                        <h3 align="center">Forest Fire Prediction</h3>
 
-</div>
-<div>
-  <h2 style="text-align: center; vertical-align: bottom; margin: 5px;">Exploratory Data Analysis</h2>
-  <script src="https://gist.github.com/vsuraj25/791f620c890ee30fc1cc9aa4ebc2d82f.js"></script>
-</div>
-<div>
-  <h2 style="text-align: center; vertical-align: bottom; margin: 5px;">Model Training</h2>
-  <script src="https://gist.github.com/vsuraj25/1b8c74ef5b3a6a3e1ef7e2655360542c.js"></script>
-</div>
+                        <p align="center">
+                            Machine Learning Project
+                            <br />
+                            <a href="https://github.com/vsuraj25"><strong>Explore my Repositories. »</strong></a>
+                            <br />
+                            <br />
+                            <a href="#intro">Introduction</a>
+                            ·
+                            <a href="#data"> Data Information</a>
+                            ·
+                            <a href="#contact">Contact</a>
+                        </p>
+                    </div>
 
-<!-- Footer Section -->
-<div id="footer"></div> 
-</body> 
-</html> 
+                    <!-- ABOUT THE PROJECT -->
+                    <h2 id="about-the-project"><strong>About The Project</strong></h2>
+                    <ul>
+                        <li>This project aims to predict forest fire using best machine learning models. Regression and
+                            Classification both streams Supervised learning is portrayed in this project. The dataset
+                            used in this project is taken from UCI Machine Learning Repository - Algerian Forest Fire
+                            Dataset. Both Single input and Bulk input prediction can be exceuted.</li>
+                    </ul>
+                    <h2 id="deployed-app"><strong>Deployed app</strong></h2>
+                    <p><a href="https://web-production-ae1b.up.railway.app/"><img
+                                src="https://user-images.githubusercontent.com/55409076/205337765-74845c49-de33-4f9d-943c-c7d80c35ccf6.PNG"
+                                alt="App Screenshot"></a></p>
+                    <p><a href="https://forest-fire-prediction.onrender.com">LINK TO DEPLOYED APP</a></p>
+                    <!-- GETTING STARTED -->
+                    <div id="intro"></div>
+
+                    <h2 id="introduction"><strong>Introduction</strong></h2>
+                    <ul>
+                        <li>In this project, i have worked on solving Regression and Classification both with a usecase
+                            of predicting the Forest Fire Weather index and Forest Fire possibility.The dataset used in
+                            this project is taken from UCI Machine Learning Repository - Algerian Forest Fire Dataset.
+                            MongoDB database is used to store the dataset. EDA and Model Building both could be found in
+                            the repo. Logging is maintained accordingly.</li>
+                    </ul>
+                    <div id="data"></div>
+                    <!-- USAGE EXAMPLES -->
+
+                    <h2 id="dataset-information"><strong>Dataset Information</strong></h2>
+                    <ul>
+                        <li>
+                            <p>Download the original dataset here :
+                                <a
+                                    href="https://archive.ics.uci.edu/ml/machine-learning-databases/00547/Algerian_forest_fires_dataset_UPDATE.csv">Algerian
+                                    Forest Fire Dataset</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>The dataset includes 244 instances that regroup a data of two regions of Algeria,namely
+                                the Bejaia region located in the northeast of Algeria and the Sidi Bel-abbes region
+                                located in the northwest of Algeria.</p>
+                        </li>
+                        <li>
+                            <p>The period of data is from June 2012 to September 2012.</p>
+                        </li>
+                        <li>
+                            <p>The dataset includes 11 attribues and 1 output attribue (class)</p>
+                        </li>
+                        <li>
+                            <p>The 244 instances have been classified into &#39;fire&#39; (138 classes) and &#39;not
+                                fire&#39; (106 classes) classes.</p>
+                        </li>
+                        <li>
+                            <p><strong>Attribute Information</strong></p>
+                        </li>
+                    </ul>
+                    <ol>
+                        <li><code>Date</code> : (DD/MM/YYYY) Day, month (&#39;june&#39; to &#39;september&#39;), year
+                            (2012) Weather data observations</li>
+                        <li><code>Temp</code> : temperature noon (temperature max) in Celsius degrees: 22 to 42</li>
+                        <li><code>RH</code> : Relative Humidity in %: 21 to 90</li>
+                        <li><code>Ws</code> :Wind speed in km/h: 6 to 29</li>
+                        <li><code>Rain</code>: total day in mm: 0 to 16.8 FWI Components</li>
+                        <li><code>Fine</code>: Fuel Moisture Code (FFMC) index from the FWI system: 28.6 to 92.5</li>
+                        <li><code>Duff Moisture Code (DMC)</code>: index from the FWI system: 1.1 to 65.9</li>
+                        <li><code>Drought Code (DC)</code>: index from the FWI system: 7 to 220.4</li>
+                        <li><code>Initial Spread Index (ISI)</code>: index from the FWI system: 0 to 18.5</li>
+                        <li><code>Buildup Index (BUI)</code>: index from the FWI system: 1.1 to 68</li>
+                        <li><code>Fire Weather Index (FWI)</code>: Index: 0 to 31.1</li>
+                        <li><code>Classes</code>: two classes, namely &#39;fire&#39; and â€œnot &#39;not fire&#39;</li>
+                    </ol>
+                    <p align="right">(<a href="#top">back to top</a>)</p>
+
+                    <!-- USAGE EXAMPLES -->
+                    <h2 id="steps">Steps</h2>
+                    <ul>
+                        <li>Installing Python, PyCharm, Monogodb, Git to Computer.</li>
+                        <li>Creating Flask app by importing <code>Flask</code> module.</li>
+                        <li>Download the source dataset from <a
+                                href="https://archive.ics.uci.edu/ml/datasets/Algerian+Forest+Fires+Dataset++#">UCI
+                                Repository</a>.</li>
+                        <li>For Classification algorithm decided to predict the features <code>Classes</code> from the
+                            dataset which is Binary classification <code>(fire, not fire)</code>.</li>
+                        <li>For Regression Problem algorithm decided to predict the feature <code>FWI</code> (Fire
+                            weather Index) which is 90%+ correlated to Classes Feature.</li>
+                    </ul>
+                    <h3 id="loading-csv-and-inserting-to-db">Loading CSV and Inserting to DB</h3>
+                    <ul>
+                        <li>The Downloaded CSV file is loaded as pandas Dataframe using Pandas Library.</li>
+                        <li>Pandas Dataframe is converted to Dict .</li>
+                        <li>Mongodb Altas is used as DB here, with <code>pymongo library</code> mongodb is connected to
+                            python.</li>
+                        <li>Database and collections created via python and the list of dictionaries is uploaded using
+                            <code>collection.insert_many</code> method.</li>
+                    </ul>
+                    <p align="right">(<a href="#top">back to top</a>)</p>
+
+                    <h3 id="eda">EDA</h3>
+                    <ul>
+                        <li>In this step, we will apply Exploratory Data Analysis (EDA) to extract insights from the
+                            data set to know which features have contributed more in predicting Forest fire by
+                            performing Data Analysis using Pandas and Data visualization using Matplotlib &amp; Seaborn.
+                        </li>
+                        <li>It is always a good practice to understand the data first and try to gather as many insights
+                            from it.</li>
+                    </ul>
+                    <h3 id="model-building">Model Building</h3>
+                    <ul>
+                        <li>For Regression Problem algorithm decided to predict the feature <code>FWI</code> (Fire
+                            weather Index) which is 90%+ correlated to Classes Feature.</li>
+                        <li>Models used : <strong>Linear regression, Lasso Regression, Ridge Regression, Random forest,
+                                Decision tree, K-Nearest Neighbour regressor, Support Vector Regressor.</strong></li>
+                        <li>For Classification algorithm decided to predict the features <code>Classes</code> from the
+                            dataset which is Binary classification <code>(fire, not fire)</code>.</li>
+                        <li>Models used : <strong>Logistic Regression, Decision Tree, Random Forest, XGboost, K-Nearest
+                                Neighbour.</strong></li>
+                    </ul>
+                    <h3 id="model-selection">Model Selection</h3>
+                    <ul>
+                        <li>HyperParameter Tuning Randomized Gridsearch CV is done for top 2 models for both Regression
+                            and Classification.</li>
+                        <li>For Classification <code>Stratified Kfold Cross-Validation metrics</code> is used based best
+                            Mean CV Accuracy Model is used for Model Deployment.</li>
+                        <li>For Regression <code>R2 score metrics</code> is used to select best model The R2 score is
+                            one of the performance evaluation measures for regression-based machine learning models.
+                        </li>
+                    </ul>
+                    <h3 id="flask">Flask</h3>
+                    <ul>
+                        <li>Importing the Flask module and creating a Flask web server from the Flask module.</li>
+                        <li>Create an object <strong>app</strong> in flask class with <code>__name__</code> which
+                            represents current app.py file.</li>
+                        <li>Create <code>/</code> route to render default page html.</li>
+                        <li><code>/predict_api</code> route for api testing using <code>Postman</code></li>
+                        <li>Create a route <code>/predict</code> <code>/predictR</code> to get user input for
+                            Classification and Regression respectively. </li>
+                        <li>Run the flask app with <code>app.run()</code> code.</li>
+                    </ul>
+                    <h3 id="heroku-deployment">Heroku Deployment</h3>
+                    <ul>
+                        <li>Create new repo in Github and push all the data using <code>Git</code>.</li>
+                        <li>Install Heroku CLI and login using <code>heroku login</code> and setup the app in Heroku
+                            Web.</li>
+                        <li>Connect with app <code>heroku git:remote -a appname</code></li>
+                        <li>Push to Heroku using <code>git push heroku main</code></li>
+                    </ul>
+                    <h2 id="requirements"><strong>Requirements</strong></h2>
+                    <ul>
+                        <li>Python 3.7</li>
+                        <li>Numpy</li>
+                        <li>Pandas</li>
+                        <li>Flask</li>
+                        <li>Checkout requirements.txt for more information.</li>
+                    </ul>
+                    <h3 id="technologies-used"><strong>Technologies used</strong></h3>
+                    <p><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"
+                            alt="Python">
+                        <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white"
+                            alt="scikit-learn">
+                        <img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white"
+                            alt="Flask">
+                        <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white"
+                            alt="NumPy">
+                        <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white"
+                            alt="Pandas">
+                        <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white"
+                            alt="HTML">
+                        <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white"
+                            alt="CSS">
+                    </p>
+                    <h3 id="tools-used"><strong>Tools used</strong></h3>
+                    <p><img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white"
+                            alt="Visual Studio Code">
+                        <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"
+                            alt="Git">
+                        <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"
+                            alt="GitHub">
+                        <img src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white"
+                            alt="Heroku">
+                        <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"
+                            alt="MongoDB">
+                    </p>
+                    <!-- CONTACT -->
+                    <div id="contact"></div>
+
+                    <h2 id="contact"><strong>Contact</strong></h2>
+                    <p><a href="https://www.linkedin.com/in/suraj-verma-982b31157/"><img
+                                src="https://img.shields.io/badge/Suraj_Verma-eeeeee?style=for-the-badge&logo=linkedin&logoColor=ffffff&labelColor=0A66C2"
+                                alt="Suraj Verma | LinkedIn"></a>
+                        <a href="mailto:sv255255@gmail.com?subject=Github"><img
+                                src="https://img.shields.io/badge/sv255255-eeeeee?style=for-the-badge&logo=gmail&logoColor=ffffff&labelColor=EA4335"
+                                alt="Suraj Verma | G Mail"></a>
+                        <a href="mailto:sv255255@gmail.com?subject=Github"><img
+                                src="https://img.shields.io/badge/My_Portfolio-eeeeee?style=for-the-badge"
+                                alt="Suraj Verma | G Mail"></a>
+                    </p>
+                    <p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+                </div>
+                <div>
+                    <h2 style="text-align: center; vertical-align: bottom; margin: 5px;">Exploratory Data Analysis</h2>
+                    <script src="https://gist.github.com/vsuraj25/791f620c890ee30fc1cc9aa4ebc2d82f.js"></script>
+                </div>
+                <div>
+                    <h2 style="text-align: center; vertical-align: bottom; margin: 5px;">Model Training</h2>
+                    <script src="https://gist.github.com/vsuraj25/1b8c74ef5b3a6a3e1ef7e2655360542c.js"></script>
+                </div>
+            </div>
+            </div>
+        </section><!-- End Portfolio Details Section -->
+
+    </main><!-- End #main -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
